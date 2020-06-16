@@ -11,8 +11,5 @@ WORKDIR /service
 COPY package.json .
 RUN npm install
 COPY server.js .
-COPY config.js .
+COPY config.example.js config.js
 COPY lib lib
-COPY certs certs
-
-CMD ["node", "/service/server.js"]
